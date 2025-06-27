@@ -9,12 +9,12 @@ class TriviaService {
 
   async getQuestions() {
     const response = await fetch(questionsApiURL)
-
-
+    console.log(response)
+    // this.getQuestions()
     const questionData = await response.json()
-
-    const questions = questionData.data.map(questionData => new Question(questionData))
-
+    console.log(questionData)
+    const questions = questionData.results.map(questionData => new Question(questionData))
+    console.log(questions)
     AppState.questions = questions
   }
 }
