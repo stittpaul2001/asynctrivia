@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="./assets/img/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="assets/style/main.css">
+  <link rel="stylesheet" href="assets/style/style.css">
+  <title>asynctrivia</title>
+</head>
+
+<body data-bs-theme="light">
+  <header>
+    <nav class="navbar bg-codeworks text-light gap-2 px-2">
+      <img src="./assets/img/logo.png" height="45" alt="" loading="lazy">
+      <div><b class="fw-bold fs-1">Async Trivia Db</b></div>
+      <div class="col-md-8">
+        <h1 class="text-light text-center">Trivia Night</h1>
+      </div>
+      <div class="ms-auto" id="authstate"></div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12 justify-text-around">
+          <h2 class="text-light text-center">Categories</h2>
+          <div class="text-center">
+            <button class="btn btn-light fs-3 fw-bold mx-2"
+              onclick="app.TriviaController.getQuestions()">Mythology</button>
+            <button class="btn btn-light mx-2 fw-bold fs-3">Art</button>
+            <button class="btn btn-light mx-2 fs-3 fw-bold">Movies</button>
+            <button class="btn btn-light fw-bold fs-3 mx-2">Music</button>
+            <button class="btn btn-light fs-3 fw-bold mx-2">Books</button>
+            <button class="btn btn-light fs-3 fw-bold mx-2">Video Games</button>
+            <button class="btn btn-light fs-3 fw-bold mx-2">Computers</button>
+            <button class="btn btn-light fs-3 fw-bold mx-2">Board Games</button>
+            <button class="btn btn-light fs-3 fw-bold mx-2">Theatre</button>
+            <button class="btn btn-light fs-3 fw-bold mx-2">Geography</button>
+            <button class="btn btn-light fw-bold fs-3 mx-2">General</button>
+            <button class="btn btn-light fw-bold fs-3 mx-2">History</button>
+            <button class="btn btn-light mt-3 fw-bold fs-3 mx-2">Television</button>
+            <button class="btn btn-light mt-3 fw-bold fs-3 mx-2">Sports</button>
+            <button class="btn btn-light mt-3 fw-bold fs-3 mx-2">Animals</button>
+          </div>
+        </div>
+      </div>
+      <div id="questions" class="row">
+
+        <!-- //STUB - question-card -->
+
+        <!-- <div class="col-md-6"> -->
+        <!-- <div class="question-card p-5">
+            <span class="fw-bold text-start text-pink px-2 mb-2">Question #1:</span>
+            <div class="card bg-dark border border-success border-3">
+              <span class="d-flex justify-content-between px-2 text-warning">
+                Question Difficulty
+                <span class="fw-bold text-end text-danger fs-4">Question Topic</span>
+              </span>
+              <div class="card-body border border-solid border-info">
+                <p class="text-start fs-2 text-light">Card Question???</p>
+              </div>
+              <div class="d-flex flex-wrap gap-3 border text-center justify-content-evenly">
+                <button onclick="" class="btn btn-outline-secondary">A</button>
+                <button onclick="" class="btn btn-outline-secondary">B</button>
+                <button onclick="" class="btn btn-outline-secondary">C</button>
+                <button onclick="" class="btn btn-outline-secondary">D</button>
+              </div>
+            </div>
+          </div> -->
+        <!-- </div> -->
+      </div>
+
+
+  </main>
+
+  <footer class="text-bg-dark">
+    <div class="text-center">
+      <p class="mb-0"><small>Made with <i class="mdi mdi-heart text-pink"></i> by CodeWorks</small></p>
+    </div>
+  </footer>
+
+  <!-- SECTION links for bootstrap, axios, and auth -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.auth0.com/js/auth0-spa-js/1.22/auth0-spa-js.production.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/jakeoverall/auth0provider-client/browser/Auth0Provider.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <!-- !SECTION -->
+  <!-- The start of our javascript -->
+  <script src="app/App.js" type="module"></script>
+
+</body>
+
+</html>
