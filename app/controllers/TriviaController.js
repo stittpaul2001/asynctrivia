@@ -12,14 +12,19 @@ export class TriviaController {
 
   async getQuestions() {
     // console.log('are there questions in the controller?')
-    await triviaService.getQuestions()
+    await triviaService.getQuestion()
   }
 
   drawQuestions() {
     const questions = AppState.questions
     let questionsContent = ''
     questions.forEach(question => questionsContent += question.questionCard)
-    const questionsElem = document.getElementById('questions')
+    let questionsElem = document.getElementById('questions')
     questionsElem.innerHTML = questionsContent
+  }
+
+  filterQuestions(filterCategory) {
+    console.log(filterCategory)
+    triviaService.filterQuestions(filterCategory)
   }
 }

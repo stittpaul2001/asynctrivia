@@ -7,7 +7,7 @@ const questionsApiURL = 'https://opentdb.com/api.php?amount=10&category=20&diffi
 
 class TriviaService {
 
-  async getQuestions() {
+  async getQuestion() {
     const response = await fetch(questionsApiURL)
     console.log(response)
     // this.getQuestions()
@@ -17,5 +17,16 @@ class TriviaService {
     console.log(questions)
     AppState.questions = questions
   }
+
+  filterQuestions(filterCategory) {
+
+    let filtered = AppState.questions.filter(question => question.category.include(filterCategory))
+    AppState.questions = filtered
+  }
+
+
+
+
+
 }
 export const triviaService = new TriviaService()
