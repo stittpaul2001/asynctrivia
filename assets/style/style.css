@@ -19,3 +19,8 @@ main {
   justify-content: start;
   align-items: end;
 }
+
+.question-card {
+  display: flex;
+  width: 100%;
+}

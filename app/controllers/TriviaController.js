@@ -23,8 +23,10 @@ export class TriviaController {
     questionsElem.innerHTML = questionsContent
   }
 
-  filterQuestions(filterCategory) {
-    console.log(filterCategory)
-    triviaService.filterQuestions(filterCategory)
+
+
+  checkAnswers(guess, id) {
+    triviaService.checkAnswers(guess, id)
+
   }
 }
